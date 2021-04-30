@@ -1,13 +1,16 @@
 # notes-app-back-end
 
 ##Install nodemon
+
 `npm install nodemon --save-dev`
 
 ##Execute the code
+
 `cd notes-app-back-end`
 `npm run start`
 
 ##Install EsLint
+
 `npm install eslint --save-dev`
 
 Some of javascript styling: 
