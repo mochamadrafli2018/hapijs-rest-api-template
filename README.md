@@ -1,15 +1,15 @@
 # notes-app-back-end
 
-##Install nodemon
+## Install nodemon
 
 `npm install nodemon --save-dev`
 
-##Execute the code
+## Execute the code
 
 `cd notes-app-back-end`
 `npm run start`
 
-##Install EsLint
+## Install EsLint
 
 `npm install eslint --save-dev`
 
