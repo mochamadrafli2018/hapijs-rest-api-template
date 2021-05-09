@@ -25,8 +25,18 @@ Some of javascript styling in ESLint:
 For better styling in VSCode, we can also donwload ESLint extension in VSCode
 
 ## Install Hapi (Node Js Framework)
-
 `npm install @hapi/hapi`
+Then check package.json
 `npm run start`
+
+## Install Nanoid (String id handle and crate unique id number in API)
+`npm install nanoid`
+Then check package.json
+
+## Create API
+1. Clone or download file above to local directory
+2. 
+Open http://ec2-13-212-153-62.ap-southeast-1.compute.amazonaws.com:8000/notes/new
+2. 
 
 Reference: https://www.dicoding.com/academies/261/tutorials
