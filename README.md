@@ -33,10 +33,4 @@ Then check package.json
 `npm install nanoid`
 Then check package.json
 
-## Create API
-1. Clone or download file above to local directory
-2. 
-Open http://ec2-13-212-153-62.ap-southeast-1.compute.amazonaws.com:8000/notes/new
-2. 
-
 Reference: https://www.dicoding.com/academies/261/tutorials
