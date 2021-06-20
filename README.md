@@ -1,14 +1,10 @@
-# notes-app-back-end
+# Bookshelf-API
+This was a simple API portofolio that use Hapi (a Node Js framework) to accomplish final project in Dicoding Academy.
 
 ## Install nodemon 
 To keep the server running even if the code has changed
 
 `npm install nodemon --save-dev`
-
-## Execute the code
-
-`cd notes-app-back-end`
-`npm run start`
 
 ## Install ESLint for javascript styling
 
@@ -24,13 +20,20 @@ Some of javascript styling in ESLint:
 
 For better styling in VSCode, we can also donwload ESLint extension in VSCode
 
+## Install Nanoid (String id handle and crate unique id number in API)
+`npm install nanoid`
+Then check package.json
+
 ## Install Hapi (Node Js Framework)
 `npm install @hapi/hapi`
 Then check package.json
 `npm run start`
 
-## Install Nanoid (String id handle and crate unique id number in API)
-`npm install nanoid`
-Then check package.json
+## Execute the code
+
+`cd bookshelf-api`
+`npm run start`
+
+## Check the output at Postman or at localhost:5000/books
 
 Reference: https://www.dicoding.com/academies/261/tutorials
