@@ -1,11 +1,14 @@
 const books = require('./books');
-
+ 
 const putBook = (request, h) => {
+  // request params untuk mengambil data id yang dikirimkan melalui URL 
+  // localhost:5000/books/{id}
   let {id} = request.params;
+  // request payload untuk mengambil data yang dikirimkan melalui HTTP
   const {
     name,
-    year, 
-    author, 
+    year,
+    author,
     summary,
     publisher,
     pageCount,
@@ -13,6 +16,8 @@ const putBook = (request, h) => {
     reading
   } = request.payload;
   const updatedAt = new Date().toISOString();
+  // memasukkan data di atas ke variabel newBookData
+  const finished = false
   const newBookData = {
     name, 
     year, 
@@ -21,6 +26,7 @@ const putBook = (request, h) => {
     publisher, 
     pageCount, 
     readPage, 
+    finished,
     reading, 
     updatedAt
   };
@@ -46,13 +52,19 @@ const putBook = (request, h) => {
     response.code(400)
     return response
   }
-
+  // assigned finished is false
+  if (newBookData.readPage < newBookData.pageCount) {
+    newBookData.finished = false
+  }
+  // assigned finished is true
+  if (newBookData.readPage == newBookData.pageCount) {
+    newBookData.finished = true
+  }
   // check index is exist
-  const index = books.findIndex((book) => book.id === id);
-  id = index
+  id = books.findIndex((book) => book.id === id);
   if (id !== -1) {
     books[id] = {
-      ...id, 
+      ...books[id], 
       name, 
       year, 
       author, 
@@ -60,6 +72,7 @@ const putBook = (request, h) => {
       publisher, 
       pageCount, 
       readPage,
+      finished,
       reading, 
       updatedAt
     }
@@ -70,12 +83,13 @@ const putBook = (request, h) => {
     response.code(200);
     return response;
   }
+  
   const response = h.response({
     status: 'fail',
-    message: 'Gagal memperbarui catatan. Id tidak ditemukan',
+    message: 'Gagal memperbarui buku. Id tidak ditemukan',
   });
   response.code(404);
   return response;
 }
-
+ 
 module.exports = {putBook}
