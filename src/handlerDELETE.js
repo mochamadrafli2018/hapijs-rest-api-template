@@ -1,6 +1,8 @@
 const books = require('./books');
-
+ 
 const deleteBook = (request, h) => {
+  // request params untuk mengambil data id yang dikirimkan melalui URL 
+  // localhost:5000/books/{id}
   const {id} = request.params;
   const index = books.findIndex((book) => book.id === id);
   if (index !== -1) {
@@ -19,5 +21,5 @@ const deleteBook = (request, h) => {
   response.code(404);
   return response;
 }
-
+ 
 module.exports = {deleteBook}
