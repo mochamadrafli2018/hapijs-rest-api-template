@@ -1,22 +1,22 @@
 const {nanoid} = require('nanoid');
 const books = require('./books');
-
+ 
 const postBook = (request, h) => {
-  /* payload tersebut dapat diakses pada route 
-  handler melalui properti request.payload */
+  // request payload untuk mengambil data yang dikirimkan melalui HTTP
   const {
     name,
-    year,author,
+    year,
+    author,
     summary,
     publisher,
     pageCount,
     readPage,
-    finish,
     reading
   } = request.payload;
   const id = nanoid(16);
   const insertedAt = new Date().toISOString();
   const updatedAt = insertedAt;
+  const finished = false
   const newBook = {
     id,
     name, 
@@ -26,7 +26,7 @@ const postBook = (request, h) => {
     publisher, 
     pageCount, 
     readPage, 
-    finish, 
+    finished,
     reading, 
     insertedAt, 
     updatedAt
@@ -53,9 +53,17 @@ const postBook = (request, h) => {
     response.code(400)
     return response
   }
+  // assigned finished is false
+  if (newBook.readPage < newBook.pageCount) {
+    newBook.finished = false
+  }
+  // assigned finished is true
+  if (newBook.readPage == newBook.pageCount) {
+    newBook.finished = true
+  }
   // push in array
   books.push(newBook);
-  // if success
+  // if success push newBook
   const isSuccess = books.filter((i) => i.id === id).length > 0;
   if (isSuccess) {
     const response = h.response(
