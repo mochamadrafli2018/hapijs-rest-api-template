@@ -34,6 +34,8 @@ Then check package.json
 `cd bookshelf-api`
 `npm run start`
 
-## Check the output at Postman or at localhost:5000/books
+## Check the output at Postman or browser at :
+1. localhost:5000/books to access all the book data
+2. localhost: 5000/books/{id} to access book data by specific id
 
 Reference: https://www.dicoding.com/academies/261/tutorials
