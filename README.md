@@ -9,8 +9,11 @@ To keep the server running even if the code has changed
 ## Install ESLint for javascript styling
 
 `npm install eslint --save-dev`
+
 `npx eslint --init`
+
 Execute ESLint with
+
 `npm run lint`
 
 Some of javascript styling in ESLint:
