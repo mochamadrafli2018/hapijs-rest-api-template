@@ -35,9 +35,7 @@ Then check package.json
 
 Then check package.json
 
-`npm run start`
-
-## Execute the code
+## Running Hapi
 
 `cd bookshelf-api`
 
