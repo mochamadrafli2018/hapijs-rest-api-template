@@ -1,5 +1,12 @@
-# Bookshelf-API
-This was a simple API portofolio that use Hapi (a Node Js framework) to accomplish final project in Dicoding Academy.
+# Bookshelf-REST-API
+
+<p align="center">
+  <a href="https://hapi.dev/" target="_blank" rel="noopener noreferrer">
+    <img width="200" src="https://raw.githubusercontent.com/hapijs/assets/master/images/hapi.png" alt="Vue logo"> 
+  </a>
+</p>
+
+This was a simple REST API portofolio that use Hapi (a Node Js framework) to accomplish final project in Dicoding Academy.
 
 ## Install nodemon 
 To keep the server running even if the code has changed
@@ -37,7 +44,9 @@ Then check package.json
 
 ## Running Hapi
 
-`cd bookshelf-api`
+Open CMD
+
+`cd name_of_hapi_folder`
 
 `npm run start`
 
